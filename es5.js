@@ -8,8 +8,19 @@ module.exports = {
     'no-cond-assign': 'error', // eslint:recommended
     'no-irregular-whitespace': 'error', // eslint:recommended
     'no-unexpected-multiline': 'error', // eslint:recommended
+    'require-jsdoc': ['error', {
+      'require': {
+        'FunctionDeclaration': true,
+        'MethodDefinition': true,
+        'ClassDeclaration': false,
+        'ArrowFunctionExpression': false,
+        'FunctionExpression': false
+      }
+    }],
     'valid-jsdoc': ['error', {
+      requireParamType: false,
       requireParamDescription: false,
+      requireReturnType: true,
       requireReturnDescription: false,
       requireReturn: false,
       prefer: {returns: 'return'}
@@ -79,7 +90,7 @@ module.exports = {
     // Strict Mode
     // http://eslint.org/docs/rules/#strict-mode
     // -----------------------------------------
-    'strict': ['error', 'global'],
+    //'strict': ['error', 'global'],
 
     // Variables
     // http://eslint.org/docs/rules/#variables
@@ -101,7 +112,7 @@ module.exports = {
     // Stylistic Issues
     // http://eslint.org/docs/rules/#stylistic-issues
     // ----------------------------------------------
-    'indent': ['error', 2, {
+    'indent': ['error', 4, {
       SwitchCase: 1,
       // continuation indent
       VariableDeclarator: 1, // indent is multiplier * indent = 1 * 2
