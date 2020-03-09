@@ -112,7 +112,7 @@ module.exports = {
     // Stylistic Issues
     // http://eslint.org/docs/rules/#stylistic-issues
     // ----------------------------------------------
-    'indent': ['error', 4, {
+    'indent': ['error', 2, {
       SwitchCase: 1,
       // continuation indent
       VariableDeclarator: 1, // indent is multiplier * indent = 1 * 2
